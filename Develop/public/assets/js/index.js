@@ -1,3 +1,5 @@
+console.log("string");
+
 var $noteTitle = $(".note-title");
 var $noteText = $(".note-textarea");
 var $saveNoteBtn = $(".save-note");
@@ -17,8 +19,11 @@ var getNotes = function() {
 
 // A function for saving a note to the db
 var saveNote = function(note) {
+  console.log("I ran saveNote function");
   return $.ajax({
     url: "/api/notes",
+    // check jquery doc
+    contentType: "application/javascript",
     data: note,
     method: "POST"
   });
