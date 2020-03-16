@@ -7,7 +7,7 @@ const db = require("./db/db.json");
 
 // app needs to be initialized before using express otherwise it's just the object 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 let id = 0;
 
